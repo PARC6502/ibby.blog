@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteTitle: 'Ibby Dot Blog',
     siteDescription: "My little corner of the internet",
-    siteImage: '/avatar.jpg', // main image of the site for metadata
+    siteImage: '/ibby-blog.png', // main image of the site for metadata
     siteUrl: 'https://ibby.blog/',
     pathPrefix: '/',
     siteLanguage: 'en',
