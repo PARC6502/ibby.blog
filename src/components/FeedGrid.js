@@ -15,7 +15,7 @@ const GridContainer = styled(Masonry)`
 `
 
 const breakpointColumnsObj = {
-  default: 4,
+  default: 1,
   1400: 3,
   1023: 2,
   767: 1
