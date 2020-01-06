@@ -16,7 +16,6 @@ export default {
       mx: 'auto'
     },
   },
-
   initialColorMode: 'dark',
   colors: {
     ...chronoblogTheme.color,
