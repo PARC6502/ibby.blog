@@ -11,7 +11,7 @@ export default ({ children }) => {
   //   return null;
   // });
   const formattedChildren = React.Children.map(children, child => {
-    if (child.type === "main") return (<Container variant='slimContainer'>{child}</Container>);
+    if (child.type === "main") return (<Container variant='mainContainer'>{child}</Container>);
     return child;
   });
   // console.log(feedItems);

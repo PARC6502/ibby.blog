@@ -2,12 +2,21 @@ import chronoblogTheme from 'gatsby-theme-chronoblog/src/gatsby-plugin-theme-ui'
 
 export default {
   ...chronoblogTheme,
-  slimContainer: {
-    px: [2, 3],
-    py: 3,
-    maxWidth: 768,
-    mx: 'auto'
+  layout: {
+    container: {
+      px: [2, 3],
+      py: 3,
+      maxWidth: '100%',
+      mx: 'auto'
+    },
+    mainContainer: {
+      px: 0,
+      py: 0,
+      maxWidth: 768,
+      mx: 'auto'
+    },
   },
+
   initialColorMode: 'dark',
   colors: {
     ...chronoblogTheme.color,
@@ -47,5 +56,6 @@ export default {
     body: '-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif',
     heading: 'inherit',
     monospace: 'Menlo, monospace'
-  }
+  },
+
 };
