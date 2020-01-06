@@ -14,10 +14,10 @@ export default ({ children }) => {
     if (child.type === "main") return (<Container variant='mainContainer'>{child}</Container>);
     return child;
   });
-  // console.log(feedItems);
-  React.Children.forEach(children, child => {
-    console.log(child);
-  })
+  // // console.log(feedItems);
+  // React.Children.forEach(children, child => {
+  //   console.log(child);
+  // })
   return (
     <Root>
       <Header />
