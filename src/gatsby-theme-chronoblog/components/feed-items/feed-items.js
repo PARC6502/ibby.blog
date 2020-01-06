@@ -291,6 +291,7 @@ export default ({
                         
                           return (
                             <Item
+                              key={item.id}
                               itemsFormat={itemsFormat}
                               item={item}
                               linksBeforeTitle={linksBeforeTitle}

@@ -2,6 +2,12 @@ import chronoblogTheme from 'gatsby-theme-chronoblog/src/gatsby-plugin-theme-ui'
 
 export default {
   ...chronoblogTheme,
+  slimContainer: {
+    px: [2, 3],
+    py: 3,
+    maxWidth: 768,
+    mx: 'auto'
+  },
   initialColorMode: 'dark',
   colors: {
     ...chronoblogTheme.color,
