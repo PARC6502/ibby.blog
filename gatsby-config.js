@@ -73,5 +73,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`
     },
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-offline`,
   ]
 };
