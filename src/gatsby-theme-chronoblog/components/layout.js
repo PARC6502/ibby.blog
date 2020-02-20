@@ -2,7 +2,8 @@ import React from 'react';
 import { Container } from '@theme-ui/components'
 // import Container from 'gatsby-theme-chronoblog/src/components/container';
 import Footer from 'gatsby-theme-chronoblog/src/components/footer';
-import Header from 'gatsby-theme-chronoblog/src/components/header';
+// import Header from 'gatsby-theme-chronoblog/src/components/header';
+import Header from './header';
 import Root from 'gatsby-theme-chronoblog/src/components/root';
 
 export default ({ children }) => {
@@ -11,7 +12,10 @@ export default ({ children }) => {
   //   return null;
   // });
   const formattedChildren = React.Children.map(children, child => {
-    if (child.type === "main") return (<Container variant='mainContainer'>{child}</Container>);
+    console.log(child.props.mdxType)
+    if (child.type === "main" 
+      || (child.props.mdxType !== "AuthorBanner" && child.props.mdxType !== "FeedItems")) 
+      return (<Container variant='mainContainer'>{child}</Container>);
     return child;
   });
   // // console.log(feedItems);

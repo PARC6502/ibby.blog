@@ -12,8 +12,9 @@
     "start": "gatsby develop"
   },
   "dependencies": {
-    "gatsby": "^2.18.17",
+    "gatsby": "^2.19.17",
     "gatsby-plugin-catch-links": "^2.1.21",
+    "gatsby-plugin-feed-mdx": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.34",
     "gatsby-plugin-offline": "^3.0.30",
     "gatsby-plugin-sitemap": "^2.2.24",
