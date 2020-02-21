@@ -1,12 +1,10 @@
 # Blog TODO
 
-1. Add image to RSS feed
-2. Add update date to frontmatter, display on page
-3. Add some kind of ethics page "ethical transparency"
-4. Move blog to a greener provider (hetzner or infomaniak)
-5. Option to order posts by recently update OR first published
-6. Optional update message/frontmatter functionality
-7. Only use `.md` extension for posts & content (for marktext & typora compatibility)
+1. Add update date to frontmatter, display on page
+2. Add some kind of ethics page "ethical transparency"
+3. Move blog to a greener provider (hetzner or infomaniak)
+4. Option to order posts by recently update OR first published
+5. Optional update message/frontmatter functionality
 
 ## Potential avenues to explore
 

@@ -93,22 +93,32 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
-              console.log(allMdx.edges)
+              const { siteUrl } = site.siteMetadata
+              
               return allMdx.edges.map(edge => {
+                const { description, date, cover } = edge.node.frontmatter
+                const { slug } = edge.node.fields
+
                 return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  type: edge.node.fields.type,
+                  description,
+                  date,
+                  url: siteUrl + slug,
+                  guid: siteUrl + slug,
+                  enclosure: cover && {
+                    url: siteUrl + cover.publicURL
+                  },
                   custom_elements: [{ "content:encoded": edge.node.html }]
                 });
               })
-              .filter(n => n.type === 'posts');
+              
             },
             query: `
               {
                 allMdx(
+                  filter: {
+                    fields: {type: {eq: "posts"}}, 
+                    frontmatter: {draft: {ne: true}}
+                  },
                   sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
                   edges {
@@ -116,13 +126,15 @@ module.exports = {
                       excerpt
                       html
                       fields { 
-                        slug
-                        type 
+                        slug 
                       }
                       frontmatter {
                         title
                         date
                         description
+                        cover {
+                          publicURL
+                        }
                       }
                     }
                   }
@@ -131,6 +143,7 @@ module.exports = {
             `,
             output: "/feed",
             title: "Ibby Dot Blog - Posts",
+            image_url: "https://ibby.blog/avatar.jpg"
           }
         ]
       }
